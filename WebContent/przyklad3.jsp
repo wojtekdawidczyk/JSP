@@ -18,5 +18,19 @@
 
 <p>Napis po zmianie: ${info.napis}
 
+<p>Aktualna godzina: ${info.godzina}
+
+<hr>
+<jsp:useBean id="licznik_page" class="beans.InfoBean" scope="page"/>
+<jsp:useBean id="licznik_request" class="beans.InfoBean" scope="request"/>
+<jsp:useBean id="licznik_sesja" class="beans.InfoBean" scope="session"/>
+<jsp:useBean id="licznik_globalny" class="beans.InfoBean" scope="application"/>
+
+<p>Licznik page: <strong>${licznik_page.licznik}</strong>
+<p>Licznik request: <strong>${licznik_request.licznik}</strong>
+<p>Licznik sesja: <strong>${licznik_sesja.licznik}</strong>
+<p>Licznik globalny: <strong>${licznik_globalny.licznik}</strong>
+
+
 </body>
 </html>
